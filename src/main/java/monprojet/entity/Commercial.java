@@ -1,7 +1,6 @@
 package monprojet.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.*;
 
 @Getter
@@ -10,10 +9,7 @@ import lombok.*;
 @RequiredArgsConstructor
 @ToString
 @Entity
-public class Administratif extends Employe{
-
+public class Commercial extends Employe{
     @NonNull
-    private String diplome;
-
-
+    private float pourcentage;
 }
