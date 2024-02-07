@@ -11,6 +11,6 @@ ALTER TABLE Employe ALTER COLUMN matricule RESTART WITH 4;
 INSERT INTO Projet (code,nom, debut, fin) VALUES (1,'Projet A', '2024-01-01', NULL);
 INSERT INTO Projet (code,nom,  debut, fin) VALUES (2,'Projet B', '2024-02-01', '2024-03-01');
 INSERT INTO Participation(id, affectation_code, contributeur_matricule, pourcentage, role) VALUES
-    (1, (SELECT code FROM Projet WHERE nom = 'Projet A'), (SELECT matricule FROM Employe WHERE nom = 'Elyes Lamine'), 50, 'Directeur de projet'),
-    (2, (SELECT code FROM Projet WHERE nom = 'Projet B'), (SELECT matricule FROM Employe WHERE nom ='Jean-Marie Pecatte'), 25, 'Developpeur backend');
-
+    (1, (SELECT code FROM Projet WHERE nom = 'Projet A'), (SELECT matricule FROM Employe WHERE nom = 'Elyes Lamine'), 50, 'Technicien'),
+    (2, (SELECT code FROM Projet WHERE nom = 'Projet B'), (SELECT matricule FROM Employe WHERE nom ='Jean-Marie Pecatte'), 25, 'Developpeur'),
+    (3, (SELECT code FROM Projet WHERE nom = 'Projet B'), (SELECT matricule FROM Employe WHERE nom = 'Elyes Lamine'), 13, 'Technicien');

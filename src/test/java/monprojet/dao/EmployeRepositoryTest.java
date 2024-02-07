@@ -27,4 +27,11 @@ class EmployeRepositoryTest {
         assertNotNull(employe, "On doit trouver l'employé Rémi Bastide dans data.sql");
         assertEquals("Remi.Bastide@univ-jfc.fr", employe.getEmail());
     }
+
+    @Test
+    void calculePourcentageParticipationProjetParMatricule() {
+        log.info("calcule du pourcentage de participation pour un employé");
+        float pourcentageParticipation = dao.calculPourcentageParticipation(2); // ici on teste pour Elyes Lamine
+        assertEquals(50.0, pourcentageParticipation);
+    }
 }
