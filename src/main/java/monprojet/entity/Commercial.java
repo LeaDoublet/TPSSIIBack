@@ -1,5 +1,6 @@
 package monprojet.entity;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.*;
 
@@ -7,6 +8,7 @@ import lombok.*;
 @Setter
 @RequiredArgsConstructor
 @ToString
+@DiscriminatorValue("Commercial")
 @Entity
 public class Commercial extends Employe{
     private float pourcentage;
