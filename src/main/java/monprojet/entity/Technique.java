@@ -11,5 +11,5 @@ import lombok.*;
 @DiscriminatorValue("Technique")
 @Entity
 public class Technique extends Employe{
-    private float montantPrime;
+    private float montantprime;
 }
