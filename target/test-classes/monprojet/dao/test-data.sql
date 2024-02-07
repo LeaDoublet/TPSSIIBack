@@ -1,0 +1,1 @@
+-- Initialisation spécifiques pour un jeu de test

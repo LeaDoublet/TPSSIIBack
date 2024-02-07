@@ -1,13 +1,11 @@
 package monprojet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,4 +25,7 @@ public class Projet {
 
     @DateTimeFormat
     private LocalDate fin;
+
+    @ManyToMany(mappedBy = "projets")
+    private List<Employe> employes;
 }

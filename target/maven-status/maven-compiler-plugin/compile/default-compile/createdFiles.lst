@@ -1,0 +1,9 @@
+monprojet\WebApp.class
+monprojet\entity\Technique.class
+monprojet\entity\Administratif.class
+monprojet\entity\Commercial.class
+monprojet\entity\Projet.class
+monprojet\entity\Employe.class
+monprojet\entity\Participation.class
+monprojet\config\SpringDataRestConfig.class
+monprojet\dao\EmployeRepository.class

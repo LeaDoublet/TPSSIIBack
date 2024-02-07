@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: monprojet.dao.EmployeRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.728 s <<< FAILURE! -- in monprojet.dao.EmployeRepositoryTest
+monprojet.dao.EmployeRepositoryTest.onTrouveUnEmployeParSonNom -- Time elapsed: 0.451 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: On doit trouver l'employé Rémi Bastide dans data.sql ==> expected: not <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+	at monprojet.dao.EmployeRepositoryTest.onTrouveUnEmployeParSonNom(EmployeRepositoryTest.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
