@@ -21,7 +21,7 @@ class EmployeRepositoryTest {
     private EmployeRepository dao;
 
     @Test
-    void onTrouveUnEmployeParSonNom() {
+    public void onTrouveUnEmployeParSonNom() {
         log.info("On peut trouver un employé par son nom (requête dans le repository)");
         Employe employe = dao.findByNom("Rémi Bastide");
         assertNotNull(employe, "On doit trouver l'employé Rémi Bastide dans data.sql");
@@ -29,9 +29,16 @@ class EmployeRepositoryTest {
     }
 
     @Test
-    void calculePourcentageParticipationProjetParMatricule() {
+    public void calculePourcentageParticipationProjetParMatricule() {
         log.info("calcule du pourcentage de participation pour un employé");
         float pourcentageParticipation = dao.calculPourcentageParticipation(2); // ici on teste pour Elyes Lamine
         assertEquals(50.0, pourcentageParticipation);
     }
+
+    @Test
+    void calculePourcentageParticipationProjetParMatriculeQuandPlusieursProjets() {
+        float pourcentageParticipation2 = dao.calculPourcentageParticipation(3); // ici on teste pour Mr Pecatte 2 projets 25+13 = 38
+        assertEquals(38.0, pourcentageParticipation2);
+    }
+
 }
