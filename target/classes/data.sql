@@ -8,4 +8,6 @@ INSERT INTO Employe(matricule,nom,montantprime,pourcentage,superieur_matricule,d
 -- Attention : la syntaxe est différente selon le SGBD utilisé
 -- Ici la syntaxe pour le SGBD H2
 ALTER TABLE Employe ALTER COLUMN matricule RESTART WITH 4;
+INSERT INTO Projet (code,nom, debut, fin) VALUES (1,'Projet A', '2024-01-01', NULL);
+INSERT INTO Projet (code,nom,  debut, fin) VALUES (2,'Projet B', '2024-02-01', '2024-03-01');
 

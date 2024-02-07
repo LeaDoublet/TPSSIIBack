@@ -2,6 +2,8 @@ package monprojet.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import monprojet.entity.Employe;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface EmployeRepository extends JpaRepository<Employe, Integer> {
 
@@ -13,4 +15,6 @@ public interface EmployeRepository extends JpaRepository<Employe, Integer> {
      */
     Employe findByNom(String nomDeLemploye);
 
+    @Query("SELECT COUNT(p) FROM Employe e JOIN e.projets p WHERE e.matricule = :matricule AND p.fin IS NULL")
+    int countProjetsEnCours(@Param("matricule") String matricule);
 }
