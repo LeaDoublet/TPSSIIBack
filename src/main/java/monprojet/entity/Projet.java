@@ -26,6 +26,6 @@ public class Projet {
     @DateTimeFormat
     private LocalDate fin;
 
-    @ManyToMany(mappedBy = "projets")
-    private List<Employe> employes;
+    @OneToMany(mappedBy = "affectation")
+    private java.util.List<Participation> partipations;
 }

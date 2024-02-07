@@ -15,6 +15,10 @@ public interface EmployeRepository extends JpaRepository<Employe, Integer> {
      */
     Employe findByNom(String nomDeLemploye);
 
-    @Query("SELECT COUNT(p) FROM Employe e JOIN e.projets p WHERE e.matricule = :matricule AND p.fin IS NULL")
-    int countProjetsEnCours(@Param("matricule") String matricule);
+
+    @Query("SELECT SUM(p.pourcentage)" +
+            "FROM Participation p " +
+            "WHERE p.contributeur.matricule = :matriculeEmploye AND p.affectation.fin IS NULL")
+    float calculPourcentageParticipation(Integer matriculeEmploye);
+
 }

@@ -30,6 +30,6 @@ public class Employe {
     @OneToMany(mappedBy = "superieur")
     private List<Employe> subordonnes;
 
-   @ManyToMany
-    private List<Projet> projets;
+    @OneToMany(mappedBy = "contributeur", fetch = FetchType.LAZY)
+    private List<Participation> participations;
 }
