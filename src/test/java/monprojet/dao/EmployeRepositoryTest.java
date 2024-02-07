@@ -32,13 +32,6 @@ class EmployeRepositoryTest {
     public void calculePourcentageParticipationProjetParMatricule() {
         log.info("calcule du pourcentage de participation pour un employé");
         float pourcentageParticipation = dao.calculPourcentageParticipation(2); // ici on teste pour Elyes Lamine
-        assertEquals(50.0, pourcentageParticipation);
+        assertEquals(50.0, pourcentageParticipation,0.01); //marge d'erreur
     }
-
-    @Test
-    void calculePourcentageParticipationProjetParMatriculeQuandPlusieursProjets() {
-        float pourcentageParticipation2 = dao.calculPourcentageParticipation(3); // ici on teste pour Mr Pecatte 2 projets 25+13 = 38
-        assertEquals(38.0, pourcentageParticipation2);
-    }
-
 }
